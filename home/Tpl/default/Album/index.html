@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta charset="utf-8" />
+        <title>精彩图集——广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="../Public/css/album.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <!--整个居中的模块-->
+            <div id="contentwrap">
+                    <!--导航条-->
+                    <layout name="Public:nav" cache="100" />
+                    <!--整个导航模块结束-->
+                    <!--内容模块-->
+                    <div id="content">
+                        <h4 class="list-header"> 当前位置：主页 &gt;&gt;精彩图集</h4>
+                        <div class="bluewrap">
+                            <!--文章内容-->
+
+                            <div class="content">
+                                <volist name="album" id="albumVo">
+                                    <div class="album_box margin_r20">
+                                        <div class="thumb_wrapper"><a href="__URL__/detail/id/{$albumVo['id']}" title="{$albumVo['info']}"><img alt="" src="__PUBLIC__/upload/photo/thumb_{$albumVo['image_path']}" /></a></div>
+                                        <h3>{$albumVo['name']}</h3>
+                                    </div>
+                                </volist>
+                                <div class="clear_h0"></div>
+                            </div>
+
+                            <!--end 文章内容-->
+                            <div class="clear"> </div>
+                        </div>
+
+                    </div>
+                    <div class="clear"> </div>
+                    <!--友情链接模块-->
+                    <layout name="Public:flink" cache="100" />
+                    <!--友情链接模块结束-->
+                </div>
+                <!--内容模块结束-->
+            </div>
+            <!--footer-->
+            <layout name="Public:footer" cache="100" />
+            <!--footer结束-->
+            <!--jia this的js-->
+            <layout name="Public:social" cache="3600"/>
+    </body>
+</html>

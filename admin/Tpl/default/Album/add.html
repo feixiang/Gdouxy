@@ -1,0 +1,33 @@
+<div class="pageContent">
+
+   <form method="post" action="__URL__/uploadAndSave/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>"/>
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>相册名：</label>
+                <input type="text" class="required"  name="name">
+            </div>
+            <div class="unit">
+                <label>所属校友会：</label>
+                <select name="class_id">
+                    <volist name="class" id="vo">
+                        <option value="{$vo.id}">{$vo.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>描 述：</label>
+                <textarea name="info"  rows="3" cols="57"></textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

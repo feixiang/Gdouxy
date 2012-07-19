@@ -1,0 +1,40 @@
+/*--产品展示区begin---*/
+.album_box {
+	float: left;
+	width: 164px;
+	height:194px;
+	text-align:center;
+	margin:0 0 20px 20px;
+	padding-bottom: 10px;
+	border-bottom: 1px dotted #999;
+	overflow:hidden;
+}
+.thumb_wrapper {
+	width: 164px;
+	height: 122px;
+	padding:5px 0;
+	background:url(../images/thumb_frame.png) no-repeat;
+}
+.album_box .thumb_wrapper img {
+	width: 150px;
+	height: 100px;
+}
+.album_box a {
+	text-decoration: none;
+}
+.album_box a:hover {
+	text-decoration: none;
+	border:2px solid red;
+}
+.album_box h3 {
+	padding: 0px;
+	margin: 0px;
+	height: 20px;
+	font-size: 14px;
+	color: #ac5d08;
+	border-top: 1px solid #fff;
+}
+.album_box p {
+	color: #666666;
+	font-weight: normal;
+}

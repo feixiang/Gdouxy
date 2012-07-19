@@ -1,0 +1,61 @@
+/********************************      Basic Structure      ********************************/
+* {
+	margin:0;
+	padding:0;
+}
+body {
+	font-family: Arial, Helvetica, sans-serif;
+	color:#fff;
+	background:url(../default/images/bg.png) repeat-x;
+}
+#login {
+	width:620px;
+	height:591px;
+	margin:0 auto;
+	background:url(../default/images/login_bg.png) no-repeat left top;
+}
+
+.login_form{
+	font-weight:bold;
+	font-size: 14px;
+	padding:150px 0 0 180px;
+	text-align:center;
+	width:280px;
+
+}
+.margint50{
+margin-top:50px;
+}
+.margint20{
+margin-top:20px;
+}
+.margint30{
+margin-top:30px;
+}
+.unit{
+display:block;
+padding:10px 0;
+margin-right:40px;
+text-align:right;
+height:27px;
+}
+form label{
+text-align:right;
+}
+form input{
+padding:5px 4px;
+border:0;
+color:#344301;
+font-weight:bold;
+height:19px;
+width:150px;
+background:url(../default/images/input_bg.png) no-repeat;
+}
+
+.login_bt{
+padding:5px 10px;
+}
+#error{
+text-align:center;
+color:red;
+}

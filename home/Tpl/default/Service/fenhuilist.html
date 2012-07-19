@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>企业联谊会——广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+        <link href="../Public/css/company.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../Public/js/jquery.js"></script>
+        <script type="text/javascript" src="../Public/js/jquery.featureList.js"></script>
+        <script language="javascript">
+            $(document).ready(function() {
+                $.featureList(
+                $("#tabs li a"),
+                $("#output li"), {
+                    start_item	:0
+                }
+            );
+            });
+        </script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <!--整个居中的模块-->
+            <div id="contentwrap">
+                    <!--导航条-->
+                    <layout name="Public:nav" cache="100" />
+                    <!--整个导航模块结束-->
+                    <!--内容模块-->
+                    <div id="content">
+                        <div class="bluewrap">
+                            <h5 class="cwall-title">各地分会列表</h5>
+                            <hr />
+                            <dl class="box fenhui">
+                                <dt><strong class="links">广东省</strong></dt>
+                                <dd> <a href="__APP__/Fenhui/Index/class_id/1" class="link">广州分会</a><a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">广州分会</a><a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">广州分会</a><a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> </dd>
+                            </dl>
+                            <dl class="box fenhui">
+                                <dt><strong class="links">广东省</strong></dt>
+                                <dd> <a href="#" class="link">广州分会</a><a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> </dd>
+                            </dl>
+                            <dl class="box fenhui">
+                                <dt><strong class="links">广东省</strong></dt>
+                                <dd> <a href="#" class="link">广州分会</a><a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> </dd>
+                            </dl>
+                            <dl class="box fenhui">
+                                <dt><strong class="links">广东省</strong></dt>
+                                <dd> <a href="#" class="link">广州分会</a><a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> <a href="#" class="link">中山分会</a> </dd>
+                            </dl>
+                        </div>
+                    </div>
+                </div>
+                <!--内容模块结束-->
+            </div>
+            <div class="clear"> </div>
+            <!--footer-->
+            <layout name="Public:footer" cache="100" />
+            <!--footer结束-->
+            <!--jia this的js-->
+            <layout name="Public:social" cache="3600"/>
+    </body>
+</html>

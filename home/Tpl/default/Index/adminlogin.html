@@ -1,0 +1,42 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+<title>广东海洋大学校友网欢迎您登录</title>
+<link rel="stylesheet" href="css/login.css" type="text/css">
+</head>
+<body>
+<a href="index.html"><img src="images/logo.png" alt="校友网主页"></a>
+<div class="section">
+  <h1>欢迎您登录</h1>
+  <!--请在action中添加处理的aspx代码-->
+  <form action="" method="post" name="userlogin">
+    <fieldset id="login-username">
+    <label for="enter-username">用户名:</label>
+    <input type="text" name="username" id="username" value="" maxlength="30">
+    </fieldset>
+    <fieldset id="login-password">
+    <label for="enter-password">密码:</label>
+    <input type="password" name="password" value="" id="enter-password" >
+    </fieldset>
+    <fieldset>
+    <small>
+    <!--选定不同的选项时处理的aspx代码不同-->
+    <select name="entrance" size="1">
+      <option value="news_admin">新闻发布系统管理入口</option>
+      <option value="bbs_admin">校友BBS管理入口</option>
+      <option value="zone_admin">校友空间管理入口</option>
+    </select>
+    </small>
+    <button type="submit">登录</button>
+    </fieldset>
+  </form>
+</div>
+<div class="footer">
+  <p><a href="#">主页</a><a href="#">校友博客</a><a href="#">校友BBS</a> </p>
+  <small>
+  <p>广东海洋大学校友会版权所有 © 2010 - 2012</p>
+  <p>Design And Supported By Flyman<img src="images/flyman.png" alt="Flyman 属于我们的舞台" width="50" height="25" /></p>
+  </small></div>
+</body>
+</html>

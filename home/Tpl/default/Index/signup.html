@@ -1,0 +1,83 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>欢迎注册成为广东海洋大学校友网的一员</title>
+        <link rel="stylesheet" href="../Public/css/login.css" type="text/css"/>
+    </head>
+    <body>
+        <a href="index.html"><img src="../Public/images/logo.png" alt="校友网主页"/></a>
+        <div class="section">
+            <h1>欢迎加入校友网</h1>
+            <form action="" method="post" name="userlogin">
+                <fieldset id="login-username">
+                    <label for="enter-username">用户名:</label>
+                    <h5>*（6～14个字符，包括字母、数字、下划线，字母开头，不区分大小写）</h5>
+                    <input type="text" name="username" id="username" value="" maxlength="30"/>
+                </fieldset>
+                <fieldset id="login-password">
+                    <label for="enter-password">密码:</label>
+                    <h5>*（6～14个字符，包括字母、区分大小写）</h5>
+                    <input type="password" name="password" value="" id="enter-password" />
+                </fieldset>
+                <fieldset id="login-password">
+                    <label for="enter-password">请再次确认密码:</label>
+                    <input type="password" name="password" value="" id="enter-password" />
+                </fieldset>
+                <fieldset id="login-password">
+                    <label for="enter-password">您的真实姓名:</label>
+                    <h5>*（您的真实姓名将作为管理员审核的重要标准）</h5>
+                    <input type="text" name="username" id="username" value="" maxlength="30"/>
+                </fieldset>
+                <fieldset id="login-password">
+                    <label for="enter-password">您的学号:</label>
+                    <h5>*（您的学号将作为管理员审核的重要标准）</h5>
+                    <input type="text" name="username" id="username" value="" maxlength="30"/>
+                </fieldset>
+                <fieldset id="login-password">
+                    <label for="enter-password">E-Mail:</label>
+                    <h5>*（邮箱将作为您找回密码的重要手段，请认真填写！）</h5>
+                    <input type="text" name="username" id="username" value="" maxlength="30"/>
+                </fieldset>
+                <hr/>
+                <fieldset id="login-password">
+                    <label for="enter-password">您的性别：</label>
+                    <input type="radio" title="性别" value="0" name="gender" id="male" class=""  checked />
+                    男
+                    &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+                    <input type="radio" value="1" name="gender" id="female" class=""  />
+                    女
+                </fieldset>
+                <fieldset>
+                    <label for="enter-password">请输入图中的验证码:&nbsp;&nbsp;&nbsp;&nbsp;<img id="verifyImg" src="__URL__/verify/"  onclick="fleshVerify()" style="cursor:pointer" alt="请输入验证码" /><a href="javascript:fleshVerify();">换一张</a></label>
+                    <input type="text" name="username" id="username" value="" maxlength="30"/>
+                </fieldset>
+                <fieldset>
+                    <small>已经有账号？<a href="index.html">马上登录</a></small>
+                    <button type="submit">登录</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer">
+            <p><a href="#">主页</a><a href="#">校友博客</a><a href="#">校友BBS</a> </p>
+            <small>
+                <p>&copy;2010 - 2012 广东海洋大学校友会版权所有</p>
+                <p>Design And Supported By Flyman<img src="../Public/images/flyman.png" alt="Flyman 属于我们的舞台" width="50" height="25" /></p>
+            </small>
+        </div>
+        <script type="text/javascript" src="../Public/js/jquery.js"></script>
+        <script type="text/javascript"  language="JavaScript">
+            <!--
+            function fleshVerify(type){
+                //重载验证码
+                var timenow = new Date().getTime();
+                if (type){
+                    $('#verifyImg').attr("src", '__URL__/verify/adv/1/'+timenow);
+                }else{
+                    $('#verifyImg').attr("src", '__URL__/verify/'+timenow);
+                }
+            }
+            //-->
+        </script>
+    </body>
+</html>

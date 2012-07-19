@@ -1,0 +1,39 @@
+<layout name="Public:editor_simple" />
+<layout name="Public:editor_attach" />
+<div class="pageContent">
+    <form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxMenu)">
+        
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>所属分类：</label>
+                <select name="class_id">
+                    <volist name="class" id="vo">
+                        <option value="{$vo.id}">{$vo.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>公告标题：</label>
+                <input type="text" class="required"  name="title">
+            </div>
+
+            <div class="unit">
+                <label>公告内容：</label>
+                <textarea name="content" class="editor"  rows="14" cols="100"></textarea>
+            </div>
+            <div class="unit">
+                <label>附件：</label>
+                <textarea name="attachment" class="editor_attach"  rows="5" cols="100"></textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

@@ -1,0 +1,57 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{$i_notice['title']}-广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <!--整个居中的模块-->
+            <div id="contentwrap">
+                <!--导航条-->
+                <layout name="Public:nav" cache="100" />
+                <!--整个导航模块结束-->
+                <!--内容模块-->
+                <div id="content">
+                    <!--左侧模块-->
+                    <div id="leftbar">
+                        <!--左侧公告区及热门展示区-->
+                        <layout name="Public:leftbar" cache="0" />
+                        <!--左侧公告区结束-->
+                    </div>
+                    <!--左侧模块结束-->
+                    <!--中间模块-->
+                    <div id="centerbar">
+                        <h3 class="list-header">当前位置：主页 &gt;&gt; <a href="__URL__/Index/ ">公告信息</a> &gt;&gt;{$i_notice['title']}</h3>
+                        <div class="list newsdetail">
+                            <!--文章内容-->
+                            <h1>{$i_notice['title']}</h1>
+                            <span> <small>发表时间:</small>{$i_notice['create_time']|date='Y-m-d',###}<small>作者:</small>{$i_notice['publicer']}</span>
+                            <div class="content">
+                                <!--文章格式由editor生成-->
+                               {$i_notice['content']}
+                               <p class="bt_download">{$i_notice['attachment']}</p>
+                            </div>
+                            </volist>
+                            <!--end 文章内容-->
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--中间模块结束-->
+                <!--友情链接模块-->
+                <layout name="Public:flink" cache="100" />
+                <!--友情链接模块结束-->
+            </div>
+            <!--内容模块结束-->
+        </div>
+        <!--footer-->
+        <layout name="Public:footer" cache="100" />
+        <!--footer结束-->
+
+
+    </body>
+</html>

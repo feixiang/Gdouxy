@@ -1,0 +1,62 @@
+<layout name="Public:editor_pic" cache="60" />
+<div class="pageContent">
+    <form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>">
+        <input type="hidden" name="id" value="{$vo.id}" >
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>名称：</label>
+                <input type="text" class="required"  name="name" value="{$vo['name']}"/>
+            </div>
+            <div class="unit">
+                <label>是否首页展示：</label>
+                <input type="radio" name="is_slide" <eq name="vo['is_slide']" value="1" >checked</eq>/>是
+                <input type="radio" name="is_slide" <eq name="vo['is_slide']" value="0" >checked</eq>/>否
+            </div>
+            <div class="unit">
+                <label>等级：</label>
+                <select name="level">
+                    <volist name="level" id="levelvo">
+                        <option value="{$levelvo}"<eq name="levelvo" value="$vo['level']">selected</eq>>{$levelvo}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>LOGO：</label>
+                <textarea name="logo" class="editor_pic"  rows="10" cols="50">{$vo['logo']}</textarea>
+            </div>
+            <div class="unit">
+                <label>横幅：</label>
+                <textarea name="banner" class="editor_pic"  rows="10" cols="100">{$vo['banner']}</textarea>
+            </div>
+             <div class="unit">
+                <label>一句话简介：（请不要超过30个字符串）</label>
+                <input type="text" class="required"  name="aword" maxlength="30" value="{$vo['aword']}"/>
+            </div>
+            <div class="unit">
+                <label>简介：</label>
+                <textarea name="info"  rows="3" cols="57">{$vo['info']}</textarea>
+            </div>
+            <div class="unit">
+                <label>详细介绍：</label>
+                <textarea name="detail" class="editor"  rows="20" cols="100">{$vo['detail']}</textarea>
+            </div>
+            <div class="unit">
+                <label>状态：</label>
+                <SELECT name="status">
+                    <option value="1">启用</option>
+                    <option value="0">禁用</option>
+                </SELECT>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

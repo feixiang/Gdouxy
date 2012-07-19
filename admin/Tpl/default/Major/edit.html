@@ -1,0 +1,42 @@
+<div class="pageContent">
+
+    <form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>">
+        <input type="hidden" name="id" value="{$vo.id}" >
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>名称：</label>
+                <input type="text" class="required"  name="name" value="{$vo.name}"/>
+            </div>
+            <div class="unit">
+                <label>所属学院：</label>
+                <select name="college_id">
+                    <volist name="college" id="college">
+                        <option value="{$college.id}"<eq name="college.id" value="$vo['college_id']">selected</eq>>{$college.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>所属系：</label>
+                <select name="deapartment_id">
+                    <volist name="deapartment" id="deapartment">
+                        <option value="{$deapartment.id}"<eq name="deapartment.id" value="$vo['deapartment_id']">selected</eq>>{$deapartment.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>简介：</label>
+                <textarea name="info"  rows="3" cols="57">{$vo.info}</textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

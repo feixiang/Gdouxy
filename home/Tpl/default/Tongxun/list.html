@@ -1,0 +1,63 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>校友通讯列表-广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <!--整个居中的模块-->
+            <div id="contentwrap">
+                <!--导航模块-->
+                <layout name="Public:nav" cache="100" />
+                <!--整个导航模块结束-->
+                <!--内容模块-->
+                <div id="content">
+                    <!--左侧模块-->
+                    
+                    <!--中间模块-->
+                    <div class="bluewrap">
+                        <h3 class="list-header">当前位置：<a href="__APP__">主页</a> &gt;&gt; 校友通讯</h3>
+                        <div class="list">
+                            <ul>
+                                <volist name="tongxun" id="tongxunVo">
+                                    <li style="padding-bottom: 20px;">
+                                    <h3><a href="__URL__/tdetail/id/{$tongxunVo['id']}">{$tongxunVo['title']}</a></h3>
+                                    <img src="../Public/images/tongxun.png" alt="缩略图" class="preview"/>
+                                    <p>{$tongxunVo['info']}<a href="__URL__/tdetail/id/{$tongxunVo['id']}">[查看详细]</a></p>
+                                    <span class="newsinfo"> <small>发表时间:</small>{$tongxunVo['create_time']|date='Y-m-d',###}</span> <br class="clear" />
+                                </li>
+                                </volist>
+                            </ul>
+                            
+                            <div class="clear"></div>
+                        </div>
+                    </div>
+                </div>
+                <!--中间模块结束-->
+                <!--友情链接模块-->
+                <dl class="box">
+                    <dt><strong class="links">友情链接</strong> <span class="more"> <a href="#">所有链接</a> | <a href="">申请加入</a> </span> </dt>
+                    <dd>
+                        <a href="#" class="link">广东海洋大学</a><a href="#" class="link">广东海洋大学</a>
+                        <a href="#" class="link">广东海洋大学</a>
+                        <a href="#" class="link">广东海洋大学</a>
+
+                    </dd>
+                </dl>
+                <!--友情链接模块结束-->
+            </div>
+            <!--内容模块结束-->
+        </div>
+        <div id="footer">
+            <p> <a href="">海大主页</a><strong>|</strong> <a href="">校友主页</a><strong>|</strong> <a href="">校友空间</a><strong>|</strong> <a href="">校友BBS</a> </p>
+            <p>广东海洋大学校友会版权所有&copy;2010 - 2012 </p>
+            <p>Design And Supported By Flyman</p>
+        </div>
+        <!--footer结束-->
+
+    </body>
+</html>

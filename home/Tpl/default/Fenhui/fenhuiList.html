@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>各地校友会列表——广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <div id="contentwrap">
+                <!--导航条-->
+                <layout name="Public:nav" cache="100" />
+                <!--整个导航模块结束-->
+                <!--内容模块-->
+                <div id="content">
+                    <div class="bluewrap">
+                        <h5 class="cwall-title">各地校友会列表</h5>
+                        <hr />
+                        <dl class="box fenhui">
+                            <dt><strong class="links">广东省</strong></dt>
+                            <dd>
+                            <volist name="gdlist" id="gdlistVo">
+                                <a href="__URL__/Index/Name/{$gdlistVo[pinyin]}" class="link">{$gdlistVo[name]}</a>
+                            </volist>
+                            </dd>
+                        </dl>
+                        <dl class="box fenhui">
+                            <dt><strong class="links">香港特别行政区</strong></dt>
+                            <dd>
+                            <volist name="hklist" id="hklistVo">
+                                <a href="__URL__/Index/Name/{$hklistVo[pinyin]}" class="link">{$hklistVo[name]}</a>
+                            </volist>
+                            </dd>
+                        </dl>
+                        <dl class="box fenhui">
+                            <dt><strong class="links">广西省</strong></dt>
+                            <dd>
+                            <volist name="gxlist" id="gxlistVo">
+                                <a href="__URL__/Index/Name/{$gxlistVo[pinyin]}" class="link">{$gxlistVo[name]}</a>
+                            </volist>
+                            </dd>
+                        </dl>
+                    </div>
+                </div>
+            </div>
+            <!--内容模块结束-->
+        </div>
+        <div class="clear"> </div>
+        <!--footer-->
+    <layout name="Public:footer" cache="100" />
+    <!--footer结束-->
+    <!--jia this的js-->
+    <layout name="Public:social" cache="3600"/>
+</body>
+</html>

@@ -1,0 +1,37 @@
+<layout name="Public:editor_simple" cache="100" />
+<div class="pageContent">
+    <form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>"/>
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>所属联合会：</label>
+                <select name="cunion_id">
+                    <volist name="cunion" id="cunion">
+                        <option value="{$cunion.id}">{$cunion.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>名称：</label>
+                <input type="text" class="required"  name="name">
+            </div>
+            <div class="unit">
+                <label>拼音：</label>
+                <input type="text" class="required alphanumeric"  name="pinyin">
+            </div>
+            <div class="unit">
+                <label>机构详细信息：</label>
+                <textarea class="editor" name="info"  rows="12" cols="80"></textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

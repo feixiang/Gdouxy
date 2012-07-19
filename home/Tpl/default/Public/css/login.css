@@ -1,0 +1,218 @@
+p, blockquote, pre, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, th, td, h1, h2, h3, h4, h5, h6, dl, dt, dd, ol, ul, li, menu, abbr, address, small, sub, sup {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent
+}
+input, textarea, select, option {
+	font:inherit
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+header, footer, aside, nav, section, article, hgroup, details, figure, video, audio, datalist, output {
+	display:block
+}
+hr{
+height:0px;
+border:1px dashed #acacac;
+margin:20px;
+}
+body {
+	padding:50px 0;
+	margin:0 auto;
+	width:560px;
+	color:#000;
+	background:#fafafa url(../images/clouds.jpg) 50% 0 repeat-x;
+	font:16px/1.5 Arial, Helvetica, sans-serif
+}
+a {
+	color:#000;
+	text-decoration:none;
+}
+body .section {
+	padding:0 0 20px;
+	margin:5px 0;
+	background:#eee;
+	border:1px solid #cdcdcd;
+	border-top:0;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px
+}
+h1 {
+	width:560px;
+	text-align:center;
+	padding:10px 0;
+	position:relative;
+	left:-1px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border-bottom:4px solid #cc0f16;
+	-webkit-border-radius:5px;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius:5px 5px 0 0;
+	border-radius:5px 5px 0 0;
+	background-color:#222;
+	-webkit-box-shadow:inset 0 10px 50px rgba(200, 200, 200, 0.4);
+	-moz-box-shadow:inset 0 10px 50px rgba(200, 200, 200, 0.4);
+	box-shadow:inset 0 10px 50px rgba(200, 200, 200, 0.4);
+	color:#fff;
+	font-size:22px;
+	font-weight:normal
+}
+input[type=text], input[type=email], input[type=password] {
+	display:block;
+	font-size:22px;
+	font-weight:bold;
+	color:#58a3cb;
+	height:40px;
+	width:100%;
+	clear:both;
+	padding:2px 5px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	background:#fff;
+	border:1px solid #000;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:inset 1px 1px 1px #fff, inset 1px 4px 10px rgba(0, 0, 0, .1);
+	-moz-box-shadow:inset 1px 1px 1px #fff, inset 1px 4px 10px rgba(0, 0, 0, .1);
+	box-shadow:inset 1px 1px 1px #fff, inset 1px 4px 10px rgba(0, 0, 0, .1)
+}
+input.valid {
+	background-image:url(/community/graphics/dexter/icons.png);
+	background-position:98% -60px;
+	background-repeat:no-repeat
+}
+fieldset, section ul, section p {
+	padding:0 30px;
+	position:relative
+}
+label, section p {
+	margin-top:20px;
+}
+label {
+	display:block;
+	font-size:18px;
+}
+p img {
+	vertical-align:middle
+}
+button[type=submit] {
+	background-color:#1096d5;
+	color:#fff
+}
+button {
+	padding:10px 25px;
+	float:right;
+	margin-top:20px;
+	line-height:20px;
+	border:1px solid #055f8a;
+	border-left-width:12px;
+	-webkit-box-shadow:inset -10px -15px 30px rgba(0, 0, 0, .1), inset 1px 1px 1px rgba(255, 255, 255, .3), inset 1px 1px 4px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(255, 255, 255, .2), 2px 2px 4px rgba(0, 0, 0, .2);
+	-moz-box-shadow:inset -10px -15px 30px rgba(0, 0, 0, .1), inset 1px 1px 1px rgba(255, 255, 255, .3), inset 1px 1px 4px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(255, 255, 255, .2), 2px 2px 4px rgba(0, 0, 0, .2);
+	box-shadow:inset -10px -15px 30px rgba(0, 0, 0, .1), inset 1px 1px 1px rgba(255, 255, 255, .3), inset 1px 1px 4px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(255, 255, 255, .2), 2px 2px 4px rgba(0, 0, 0, .2);
+	-webkit-border-radius:1px;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-top-left-radius:0;
+	-moz-border-radius:0 1px;
+	border-radius:0 1px 1px 0;
+	font-size:18px;
+	font-weight:bold;
+	text-shadow:1px 1px 2px rgba(0, 0, 0, .3);
+	cursor:pointer
+}
+button:hover {
+	text-shadow:1px 1px 2px rgba(0, 0, 0, .3), 0 0 2px rgba(255, 255, 255, .8)
+}
+button:active {
+	position:relative;
+	top:1px;
+	left:1px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none
+}
+.check {
+	float:left
+}
+fieldset small {
+	float:left;
+	width:60%;
+	margin-top:20px;
+	font-size:14px
+	color:#666;
+}
+fieldset h5{
+font-size:12px;
+color:#0ad749;
+}
+small a{
+color:red;
+}
+
+.footer {
+	text-align:center;
+}
+.footer small {
+	color:#666
+}
+.footer a {
+	margin:10px;
+	color:#666;
+}
+.footer a:hover {
+	color:#000;
+}
+section .fieldstatus p {
+	background:#ffc;
+	background:rgba(255, 255, 200, .95);
+	padding:5px 10px;
+	margin:0 !important;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:1px 2px 4px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 2px 4px rgba(0, 0, 0, .1);
+	box-shadow:1px 2px 4px rgba(0, 0, 0, .1)
+}
+#username-status li {
+	padding:2px 5px;
+	list-style:none;
+	cursor:pointer
+}
+#username-status li:hover {
+	background:#bbb
+}
+#username-status p {
+	-webkit-border-radius:3px;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+	-webkit-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	box-shadow:1px 0 5px rgba(0, 0, 0, .1)
+}
+#username-status ul {
+	border-top:1px solid #dd9;
+	-webkit-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	background:#ffc;
+	background:rgba(255, 255, 200, .98);
+	padding:3px 0;
+	-webkit-border-radius:3px;
+	-webkit-border-top-right-radius:0;
+	-webkit-border-top-left-radius:0;
+	-moz-border-radius:0 0 3px 3px;
+	border-radius:0 0 3px 3px
+}

@@ -1,0 +1,392 @@
+p, blockquote, pre, img, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, th, td, h1, h2, h3, h4, h5, h6, dl, dt, dd, ol, ul, li, menu, abbr, address, small, sub, sup {
+	margin:0;
+	padding:0;
+	border:0;
+	font-size:100%;
+	vertical-align:baseline;
+	background:transparent
+}
+input, textarea, select, option {
+	font:inherit
+}
+table {
+	border-collapse:collapse;
+	border-spacing:0
+}
+header, footer, aside, nav, section, article, hgroup, details, figure, video, audio, datalist, output {
+	display:block
+}
+body {
+	padding:50px 0;
+	margin:0 auto;
+	width:560px;
+	color:#000;
+	background:#fafafa url(../images/clouds.jpg) 50% 0 repeat-x;
+	font:16px/1.5 Arial, Helvetica, sans-serif
+}
+a {
+	color:#000
+}
+body > section {
+	padding:0 0 20px;
+	margin:5px 0;
+	background:#eee;
+	border:1px solid #cdcdcd;
+	border-top:0;
+	-webkit-border-radius:5px;
+	-moz-border-radius:5px;
+	border-radius:5px
+}
+h1 {
+	width:560px;
+	padding:15px 25px 10px;
+	position:relative;
+	left:-1px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	border-bottom:4px solid #cc0f16;
+	-webkit-border-radius:5px;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius:5px 5px 0 0;
+	border-radius:5px 5px 0 0;
+	background-color:#222;
+	-webkit-box-shadow:inset 0 10px 50px rgba(200, 200, 200, 0.4);
+	-moz-box-shadow:inset 0 10px 50px rgba(200, 200, 200, 0.4);
+	box-shadow:inset 0 10px 50px rgba(200, 200, 200, 0.4);
+	color:#fff;
+	font-size:22px;
+	font-weight:normal
+}
+input[type=text], input[type=email], input[type=password] {
+	display:block;
+	height:40px;
+	width:100%;
+	clear:both;
+	padding:2px 5px;
+	-webkit-box-sizing:border-box;
+	-moz-box-sizing:border-box;
+	box-sizing:border-box;
+	background:#fff;
+	border:1px solid #000;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:inset 1px 1px 1px #fff, inset 1px 4px 10px rgba(0, 0, 0, .1);
+	-moz-box-shadow:inset 1px 1px 1px #fff, inset 1px 4px 10px rgba(0, 0, 0, .1);
+	box-shadow:inset 1px 1px 1px #fff, inset 1px 4px 10px rgba(0, 0, 0, .1)
+}
+input.valid {
+	background-image:url(/community/graphics/dexter/icons.png);
+	background-position:98% -60px;
+	background-repeat:no-repeat
+}
+fieldset, section ul, section p {
+	padding:0 30px;
+	position:relative
+}
+label, section p {
+	margin-top:20px
+}
+label {
+	display:block;
+	font-size:18px
+}
+p img {
+	vertical-align:middle
+}
+.introtext {
+	font-size:14px
+}
+.introtext ul {
+	margin:10px 0 0 20px
+}
+button[type=submit] {
+	background-color:#1096d5;
+	color:#fff
+}
+button {
+	float:right;
+	padding:10px 25px;
+	margin-top:20px;
+	line-height:20px;
+	border:1px solid #055f8a;
+	border-left-width:12px;
+	-webkit-box-shadow:inset -10px -15px 30px rgba(0, 0, 0, .1), inset 1px 1px 1px rgba(255, 255, 255, .3), inset 1px 1px 4px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(255, 255, 255, .2), 2px 2px 4px rgba(0, 0, 0, .2);
+	-moz-box-shadow:inset -10px -15px 30px rgba(0, 0, 0, .1), inset 1px 1px 1px rgba(255, 255, 255, .3), inset 1px 1px 4px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(255, 255, 255, .2), 2px 2px 4px rgba(0, 0, 0, .2);
+	box-shadow:inset -10px -15px 30px rgba(0, 0, 0, .1), inset 1px 1px 1px rgba(255, 255, 255, .3), inset 1px 1px 4px rgba(255, 255, 255, .2), inset 0 1px 1px rgba(255, 255, 255, .2), 2px 2px 4px rgba(0, 0, 0, .2);
+	-webkit-border-radius:1px;
+	-webkit-border-bottom-left-radius:0;
+	-webkit-border-top-left-radius:0;
+	-moz-border-radius:0 1px;
+	border-radius:0 1px 1px 0;
+	font-size:18px;
+	font-weight:bold;
+	text-shadow:1px 1px 2px rgba(0, 0, 0, .3);
+	cursor:pointer
+}
+button:hover {
+	text-shadow:1px 1px 2px rgba(0, 0, 0, .3), 0 0 2px rgba(255, 255, 255, .8)
+}
+button:active {
+	position:relative;
+	top:1px;
+	left:1px;
+	-webkit-box-shadow:none;
+	-moz-box-shadow:none;
+	box-shadow:none
+}
+.support, footer {
+	margin:0 10px;
+	float:left
+}
+.check {
+	float:left
+}
+.support li {
+	display:inline;
+	padding-right:5px;
+	border-right:1px solid #aaa;
+	font-size:14px
+}
+.support li+li {
+	border:0
+}
+fieldset small {
+	float:left;
+	width:60%;
+	margin-top:20px;
+	font-size:12px
+}
+footer small {
+	font-size:12px;
+	color:#666
+}
+#recaptcha_image {
+	float:left;
+	margin:0 0 5px
+}
+.recaptcha_logo {
+	float:right;
+	margin:10px 20px 0 0
+}
+#recaptcha_image img {
+	border:1px solid #737373
+}
+.options {
+	position:absolute;
+	left:330px
+}
+.options .reload {
+	font-weight:bold
+}
+.options a {
+	cursor:pointer;
+	text-decoration:none;
+	font-size:11px;
+	display:block;
+	background:#fff;
+	margin:0 0 5px 7px;
+	height:20px;
+	line-height:20px;
+	padding:3px 10px 2px;
+	border:1px solid #ccc;
+	-webkit-box-shadow:inset 1px 1px 1px #fff, inset -1px -1px 1px #fff, inset -1px -6px 20px rgba(0, 0, 0, .1);
+	-moz-box-shadow:inset 1px 1px 1px #fff, inset -1px -1px 1px #fff, inset -1px -6px 20px rgba(0, 0, 0, .1);
+	box-shadow:inset 1px 1px 1px #fff, inset -1px -1px 1px #fff, inset -1px -6px 20px rgba(0, 0, 0, .1);
+	text-shadow:0 0 3px #fff
+}
+.fieldstatus {
+	font-size:12px;
+	z-index:999;
+	margin:7px 5px 0;
+	position:absolute;
+	width:50%
+}
+#error-main, .fieldstatus.noscript {
+	position:static
+}
+#error-main {
+	width:70%;
+	margin:0 30px
+}
+#error-main p:before {
+	display:none
+}
+.fieldstatus p:before {
+	content:'';
+	display:block;
+	width:0;
+	height:0;
+	position:absolute;
+	left:15px;
+	top:-16px;
+	border:8px solid;
+	border-color:transparent transparent rgba(255, 255, 200, .95)
+}
+section .fieldstatus p {
+	background:#ffc;
+	background:rgba(255, 255, 200, .95);
+	padding:5px 10px;
+	margin:0 !important;
+	-webkit-border-radius:3px;
+	-moz-border-radius:3px;
+	border-radius:3px;
+	-webkit-box-shadow:1px 2px 4px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 2px 4px rgba(0, 0, 0, .1);
+	box-shadow:1px 2px 4px rgba(0, 0, 0, .1)
+}
+#username-status li {
+	padding:2px 5px;
+	list-style:none;
+	cursor:pointer
+}
+#username-status li:hover {
+	background:#bbb
+}
+#username-status p {
+	-webkit-border-radius:3px;
+	-webkit-border-bottom-right-radius:0;
+	-webkit-border-bottom-left-radius:0;
+	-moz-border-radius:3px 3px 0 0;
+	border-radius:3px 3px 0 0;
+	-webkit-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	box-shadow:1px 0 5px rgba(0, 0, 0, .1)
+}
+#username-status ul {
+	border-top:1px solid #dd9;
+	-webkit-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	-moz-box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	box-shadow:1px 1px 5px rgba(0, 0, 0, .1);
+	background:#ffc;
+	background:rgba(255, 255, 200, .98);
+	padding:3px 0;
+	-webkit-border-radius:3px;
+	-webkit-border-top-right-radius:0;
+	-webkit-border-top-left-radius:0;
+	-moz-border-radius:0 0 3px 3px;
+	border-radius:0 0 3px 3px
+}
+#sitelang {
+	float:right;
+	font-size:12px;
+	text-align:right
+}
+#sitelang fieldset {
+	padding:4px 10px 0 0
+}
+#sitelang label {
+	font-size:11px;
+	color:#666;
+	display:inline;
+	margin-right:3px
+}
+@media all and (max-width:589px) {
+fieldset, h1, body, html {
+max-width:100% !important;
+overflow:hidden
+}
+section {
+border:0;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box
+}
+body {
+width:325px;
+padding:10px 0;
+font-size:14px;
+position:absolute;
+left:0;
+right:0
+}
+.fieldstatus {
+width:90%;
+margin:20px 1% 0
+}
+.fieldstatus p {
+padding:2px 5px !important
+}
+fieldset div {
+max-width:100%
+}
+label {
+margin-top:10px;
+padding-left:1%;
+font-size:14px;
+float:left
+}
+input[type=text], input[type=email], input[type=password] {
+height:30px;
+font-size:15px;
+max-width:98%;
+box-shadow:none;
+margin:0 1%
+}
+input.valid {
+background-position:98% -65px
+}
+.options {
+float:right;
+position:static;
+margin:8px 1% 0
+}
+.options a {
+display:inline;
+padding:2px 5px;
+margin:0 0 0 5px;
+box-shadow:none
+}
+.recaptcha_logo {
+display:none
+}
+h1 {
+width:325px;
+padding:8px 3% 0;
+position:static;
+min-height:30px;
+font-size:16px;
+overflow:hidden;
+box-shadow:none
+}
+#recaptcha_image img, #recaptcha_image {
+max-width:100% !important;
+height:auto;
+-webkit-box-sizing:border-box;
+-moz-box-sizing:border-box;
+box-sizing:border-box
+}
+fieldset, section p {
+padding:0 !important
+}
+fieldset small {
+clear:both;
+float:none;
+display:block;
+width:auto;
+margin:5px
+}
+section {
+padding:0 0 10px
+}
+button {
+height:auto;
+margin:10px 10px 0;
+padding:5px 15px 5px;
+line-height:25px;
+font-size:16px;
+border-left-width:8px
+}
+}
+@media all and (max-width:300px) {
+fieldset, section p {
+padding:0 5px
+}
+}
+@media handheld {
+#mq-test-narrow {
+	display:none
+}
+}

@@ -1,0 +1,21 @@
+<dl class="box">
+    <dt><strong class="blog">精彩推荐</strong></dt>
+    <dd>
+        <ul>
+            <volist name="recommand" id="recommandVo">
+                <li><a href="__APP__/News/newsdetail/id/{$recommandVo['id']}" title="{$recommandVo['title']}">{$recommandVo['title']}</a><span>{$recommandVo['create_time']|date="m-d",###}</span></li>
+            </volist>
+        </ul>
+    </dd>
+</dl>
+<!-- <script type="text/javascript" src="../Public/js/myloop.js"></script>-->
+<dl class="box">
+    <dt><strong class="notice">通知公告</strong></dt>
+    <dd>
+        <ul>
+            <volist name="lnotice" id="lnoticeVo">
+                <li><a href="__APP__/Notice/noticedetail/id/{$lnoticeVo['id']}" title="{$lnoticeVo['title']}">{$lnoticeVo['title']}</a><span>{$lnoticeVo['create_time']|date="m-d",###}</span></li>
+            </volist>
+        </ul>
+    </dd>
+</dl>

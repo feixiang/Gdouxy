@@ -1,0 +1,37 @@
+<div class="pageContent">
+
+    <form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" enctype="multipart/form-data" onsubmit="return iframeCallback(this, dialogAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>">
+        <input type="hidden" name="id" value="{$vo.id}" >
+        <input type="hidden" name="orign_image" value="{$vo.image_path}" >
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>请选择相册：</label>
+                <select name="album_id">
+                    <volist name="album" id="albumvo">
+                        <option value="{$albumvo.id}"<eq name="albumvo.id" value="$vo['album_id']">selected</eq>>{$albumvo.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>请选择图片：</label>
+                <input type="file" class="required"  name="image_path">
+                <span style="color:red;">请不要上传大于2M的图片</span>
+            </div>
+
+            <div class="unit">
+                <label>描述：</label>
+                <textarea name="info"  rows="3" cols="57">{$vo['info']}</textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

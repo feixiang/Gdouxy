@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta charset="utf-8" />
+        <title>欢迎来到广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+        <script type="text/javascript" src="../Public/js/jquery.js"></script>
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"></div>
+            <!--整个居中的模块-->
+
+            <div id="contentwrap">
+                <!--导航条-->
+                <layout name="Public:nav" cache="100" />
+                <!--整个导航模块结束-->
+                <!--内容模块-->
+                <div id="content">
+                    <div class="bluewrap">
+                        <div style="padding:100px 50px; text-align: center;">
+                            <h1>{$message}<a href="__APP__">返回主页</a></h1>
+                            <p>系统将在 <span style="color:blue;font-weight:bold">{$waitSecond}</span> 秒后自动跳转,如果不想等待,直接点击 <a href="{$jumpUrl}">这里</a> 跳转</p>
+                        </div>
+                    </div>
+                </div>
+                <!--友情链接模块-->
+                <layout name="Public:flink" cache="100" />
+                <!--友情链接模块结束-->
+            </div>
+        </div>
+        <!--footer-->
+    <layout name="Public:footer" cache="100" />
+    <!--footer结束-->
+</body>
+</html>

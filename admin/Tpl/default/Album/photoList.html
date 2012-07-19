@@ -1,0 +1,44 @@
+<include file="Public:pagerForm" />
+
+<div class="pageContent">
+    <div class="panelBar">
+        <ul class="toolBar">
+            <li><a class="add" href="__URL__/addPhoto/aid/{$_GET['aid']}" target="dialog" mask="true"><span>新增</span></a></li>
+            <li><a class="delete" href="__APP__/Photo/foreverdelete/id/{sid_node}/navTabId/__MODULE__" target="ajaxTodo" calback="navTabAjaxMenu" title="你确定要删除吗？" warn="请选择节点"><span>删除</span></a></li>
+            <li><a class="edit" href="__URL__/editPhoto/id/{sid_node}" target="dialog" mask="true" warn="请选择节点"><span>修改</span></a></li>
+            <li><a class="add" href="__URL__/setCover/id/{sid_node}/aid/{$_GET['aid']}" target="ajaxTodo" calback="navTabAjaxMenu" mask="true" warn="请选择节点"><span>设为封面</span></a></li>
+        </ul>
+    </div>
+
+
+    <table class="table" width="100%" layoutH="138">
+        <thead>
+            <tr>
+                <th width="60">编号</th>
+                <th width="120">所属相册</th>
+                <th>文件路径</th>
+                <th>图片描述</th>
+                <th width="100">操作</th>
+            </tr>
+        </thead>
+        <tbody>
+        <volist id="vo" name="photo">
+            <tr target="sid_node" rel="{$vo['id']}">
+                <td>{$vo['id']}</td>
+                <td>{$vo['album_id']|getAlbumName}</td>
+                <td>{$vo['image_path']}</td>
+                <td>{$vo['info']}</td>
+                <td><a href="__URL__/editPhoto/id/{$vo['id']}" target="dialog">编辑</a></td>
+            </tr>
+        </volist>
+        </tbody>
+    </table>
+
+    <div class="panelBar">
+        <div class="pages">
+            <span>共{$totalCount}条</span>
+        </div>
+        <div class="pagination" targetType="navTab" totalCount="{$totalCount}" numPerPage="{$numPerPage}" pageNumShown="10" currentPage="{$currentPage}"></div>
+    </div>
+</div>
+

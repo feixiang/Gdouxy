@@ -1,0 +1,50 @@
+<script type="text/javascript">
+    <!--
+    function selectDepartment(form$){
+        var $form = $(form$, $.pdialog.getCurrent())
+        var college_id = $("#selectD option:selected").val();
+        var url = "__URL__/getDepartment/college_id/"+ college_id;
+        $("#DepartmentSelectBox", $.pdialog.getCurrent()).loadUrl(url);
+    }
+    //-->
+</script>
+
+<div class="pageContent">
+
+    <form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>"/>
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>所属学院：</label>
+                <select name="college_id" id="selectD" onchange="selectDepartment()">
+                    <option value="" >请选择学院</option>
+                    <volist id="college" name="college">
+                        <option value="{$college['id']}" >{$college['name']}</option>
+                    </volist>
+                </select>
+            </div>
+
+            <div id="DepartmentSelectBox">
+                
+            </div>
+            <div class="unit">
+                <label>名称：</label>
+                <input type="text" class="required"  name="name">
+            </div>
+
+            <div class="unit">
+                <label>简介：</label>
+                <textarea name="info"  rows="3" cols="57"></textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

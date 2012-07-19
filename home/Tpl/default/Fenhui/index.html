@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta name="keywords" content="校友，广东海洋大学，学校，校友网，校友会" />
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+        <title>{$fenhuiName}——广东海洋大学校友网</title>
+        <link href="../Public/css/main.css" rel="stylesheet" type="text/css" />
+    </head>
+    <body>
+        <div id="container">
+            <div id="header"><a href="#">{$banner}</a></div>
+            <!--整个居中的模块-->
+            <div id="contentwrap">
+                <!--导航条-->
+                <layout name="Public:fenhui_nav"/>
+                <!--整个导航模块结束-->
+                <!--内容模块-->
+                <div id="content">
+                    <!--左侧模块-->
+                    <div id="leftbar">
+                        <!--左侧公告区及热门展示区-->
+                        <layout name="Public:leftbar" cache="0" />
+                        <!--左侧公告区结束-->
+                    </div>
+                    <!--左侧模块结束-->
+                    <!--正中文字内容-->
+                    <div class="maintext">
+                        <!--校友之星-->
+                        <div class="matestar">
+                            <volist name="focus" id="focusVo">
+                                <h2><a href="__APP__/Focus/focusdetail/id/{$focusVo['id']}">{$focusVo['title']}</a></h2>
+                                <span>{$focusVo['info']}…<a href="__APP__/Focus/focusdetail/id/{$focusVo['id']}">[查看全文]</a></span>
+                            </volist>
+                        </div>
+                        <!--校友之星结束-->
+                        <!--校友动态-->
+                        <div class="newsbox">
+                            <h2>{$fenhuiName}动态</h2>
+                            <ol>
+                                <volist name="fenhui" id="fenhuiVo">
+                                    <li><a href="__APP__/News/newsdetail/id/{$fenhuiVo['id']}.html" title="{$fenhuiVo['title']}">{$fenhuiVo['title']}</a><span>{$fenhuiVo['create_time']|date="m-d",###}</span></li>
+                                </volist>
+                            </ol>
+                        </div>
+                        <!--校友动态结束-->
+                        <!--总会动态-->
+                        <div class="newsbox">
+                            <h2>总会动态</h2>
+                            <ol>
+                                <volist name="zonghui" id="zonghuiVo">
+                                    <li><a href="__APP__/News/newsdetail/id/{$zonghuiVo['id']}.html" title="{$zonghuiVo['title']}">{$zonghuiVo['title']}</a><span>{$zonghuiVo['create_time']|date="m-d",###}</span></li>
+                                </volist>
+                            </ol>
+                        </div>
+                        <!--总会动态结束-->
+                    </div>
+                    <!--正中文字内容结束-->
+                    <!--右侧模块-->
+                    <div id="rightbar">
+                        <div class="newsbox">
+                            <h2>校友捐赠</h2>
+                            <ol>
+                                <volist name="donate" id="donateVo">
+                                    <li><a href="#" title="{$donateVo['things']}">{$donateVo['donator']}<small style="color:red; font-size:11px;">捐赠了</small>{$donateVo['things']}</a> </li>
+                                </volist>
+                            </ol>
+                        </div>
+                        <div class="newsbox">
+                            <h2>校友祝福</h2>
+                            <ol>
+                                <volist name="bless" id="blessVo">
+                                    <li><a href="#" title="{$blessVo['name']}{$blessVo['content']}">{$blessVo['name']}{$blessVo['content']}</a> </li>
+                                </volist>
+                            </ol>
+                        </div>
+                    </div>
+                </div>
+                <!--中间模块结束-->
+                <div class="clear"></div>
+                <!--友情链接模块-->
+                <layout name="Public:flink" cache="100" />
+                <!--友情链接模块结束-->
+            </div>
+        </div>
+        <!--footer-->
+    <layout name="Public:footer" cache="100" />
+    <!--footer结束-->
+
+    <script type="text/javascript" src="../Public/js/jquery.js"></script>
+    <script type="text/javascript" src="../Public/js/jquery.KinSlideshow-1.2.1.min.js"></script>
+    <script type="text/javascript">
+        $(function(){
+            $("#KinSlideshow").KinSlideshow({
+                mouseEvent:"mouseover",intervalTime:2,
+                titleBar:{titleBar_height:30,titleBar_bgColor:"#08355c",titleBar_alpha:0.5},
+                titleFont:{TitleFont_size:12,TitleFont_color:"#FFFFFF",TitleFont_weight:"normal"},
+                btn:{btn_bgColor:"#FFFFFF",btn_bgHoverColor:"#1072aa",btn_fontColor:"#000000",
+                    btn_fontHoverColor:"#FFFFFF",btn_borderColor:"#cccccc",
+                    btn_borderHoverColor:"#1188c0",btn_borderWidth:1}
+            });
+        })
+    </script>
+    <!--jia this的js-->
+    <layout name="Public:social" cache="3600"/>
+</body>
+</html>

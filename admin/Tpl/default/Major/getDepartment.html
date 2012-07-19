@@ -1,0 +1,14 @@
+<script type="text/javascript">
+    function setEasy(){
+        $("#easy").text($("#department option:selected").text()) ;
+    }
+</script>
+<div class="unit">
+    <label>所属系：</label>
+    <label id="easy">{$easy}</label>
+    <select id="department" name="department_id" onchange="setEasy();">
+        <volist id="department" name="department">
+            <option value="{$department['id']}" >{$department['name']}</option>
+        </volist>
+    </select>
+</div>

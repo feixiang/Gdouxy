@@ -1,0 +1,56 @@
+<layout name="Public:editor" cache="60" />
+<div class="pageContent">
+
+    <form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>">
+        <input type="hidden" name="id" value="{$vo.id}" >
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>新闻标题：</label>
+                <input type="text" class="required" size="100"  name="title" value="{$vo['title']}">
+            </div>
+            <div class="unit">
+                <label>所属分类：</label>
+                <select name="cunion_id">
+                    <volist name="cunion" id="cunion">
+                        <option value="{$cunion.id}"<eq name="cunion.id" value="$vo['cunion_id']">selected</eq>>{$cunion.name}</option>
+                    </volist>
+                </select>
+            </div>
+            <div class="unit">
+                <label>来源：</label>
+                <input type="text" name="source"  value="{$vo['source']}">
+            </div>
+            <div class="unit">
+                <label>关键字：</label>
+                <input type="text" class="required"  name="keyword"  value="{$vo['keyword']}">
+            </div>
+            <div class="unit">
+                <label>浏览次数：</label>
+                <input type="text"  name="viewCnt"  value="{$vo['viewCnt']}">
+            </div>
+            <div class="unit">
+                <label>是否首页展示：</label>
+                <input type="radio" name="is_slide" <eq name="vo['is_slide']" value="1" >checked</eq>/>是
+                <input type="radio" name="is_slide" <eq name="vo['is_slide']" value="0" >checked</eq>/>否
+            </div>
+            <div class="unit">
+                <label>新闻摘要：</label>
+                <textarea name="info" rows="4" cols="50">{$vo['info']}</textarea>
+            </div>
+            <div class="unit">
+                <label>内 容：</label>
+                <textarea name="content" class="editor"  rows="20" cols="100">{$vo['content']}</textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

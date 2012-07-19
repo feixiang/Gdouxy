@@ -1,0 +1,45 @@
+<layout name="Public:editor_simple" cache="100" />
+<layout name="Public:editor_pic" cache="100" />
+<div class="pageContent">
+    <form method="post" action="__URL__/update/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, navTabAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>">
+        <input type="hidden" name="id" value="{$vo.id}" >
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+                <label>机构所属分类：</label>
+                <select name="class_id">
+                    <volist name="class" id="class">
+                        <option value="{$class.id}"<eq name="class.id" value="$vo['class_id']">selected</eq>>{$class.name}</option>
+                    </volist>
+                </select>
+            </div>
+            
+
+            <div class="unit">
+                <label>机构简介：</label>
+                <textarea class="editor" name="info"  rows="10" cols="80">{$vo.info}</textarea>
+            </div>
+            <div class="unit">
+                <label>机构职责：</label>
+                <textarea class="editor" name="duty"  rows="10" cols="80">{$vo.duty}</textarea>
+            </div>
+            <div class="unit">
+                <label>机构负责人：</label>
+                <textarea class="editor" name="admin"  rows="10" cols="80">{$vo.admin}</textarea>
+            </div>
+            <div class="unit">
+                <label>机构规章制度：</label>
+                <textarea class="editor" name="rule"  rows="10" cols="80">{$vo.rule}</textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

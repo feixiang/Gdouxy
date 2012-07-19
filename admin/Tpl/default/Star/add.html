@@ -1,0 +1,25 @@
+<layout name="Public:editor_simple" cache="60" />
+<div class="pageContent">
+    <form method="post" action="__URL__/insert/navTabId/__MODULE__" class="pageForm required-validate" onsubmit="return validateCallback(this, dialogAjaxMenu)">
+        <input type="hidden" name="user_id" value="<?php echo $_SESSION[C('USER_AUTH_KEY')] ?>"/>
+        <input type="hidden" name="id" value="{$user_id}" />
+        <div class="pageFormContent" layoutH="58">
+            <div class="unit">
+			校友名称：{$name}
+            </div>
+            <div class="unit">
+                <label>评选原因：</label>
+                <textarea class="editor" tools="mini" name="reason"  rows="20" cols="100"></textarea>
+            </div>
+        </div>
+
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">确定</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+
+</div>
+

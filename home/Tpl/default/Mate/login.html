@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <title>广东海洋大学校友网欢迎您登录</title>
+        <link rel="stylesheet" href="../Public/css/login.css" type="text/css">
+        <script type="text/javascript" src="../Public/js/jquery-1.4.2.min.js"></script>
+        <script type="text/javascript">
+            function fleshVerify(type){
+            //重载验证码
+            var timenow = new Date().getTime();
+            if (type){
+            $('#verifyImg').attr("src", '__APP__/Public/verify/adv/1/'+timenow);
+            }else{
+            $('#verifyImg').attr("src", '__APP__/Public/verify/'+timenow);
+            }
+            }
+        </script>
+    </head>
+    <body>
+        <a href="__APP__/Index/"><img src="../Public/images/logo.png" alt="校友网主页"></a>
+        <div class="section">
+            <h1>欢迎您登录</h1>
+            <form action="__APP__/Public/login" method="post" name="userlogin">
+                <fieldset id="login-username">
+                    <label for="enter-username">您的姓名:</label>
+                    <input type="text" name="name" id="username" value="" maxlength="30" />
+                </fieldset>
+                <fieldset id="login-password">
+                    <label for="enter-password">密码:</label>
+                    <input type="password" name="password" value="" id="enter-password" />
+                </fieldset>
+                <fieldset>
+                    <label>请输入验证码<img id="verifyImg" src="__APP__/Public/verify/"  onclick="fleshVerify()" style="cursor:pointer" alt="请输入验证码" /><a href="javascript:fleshVerify();">换一张</a></label>
+                    <input type="text" name="v_code_input" id="v_code_input" value="" maxlength="7" class="required" style="width:100px;" />
+                </fieldset>
+                <fieldset>
+                    <small>还没有账号？<a href="__URL__/Index/">马上注册</a>&nbsp;&nbsp;&nbsp;<a href="index.html">忘记密码？</a></small>
+                    <button type="submit">登录</button>
+                </fieldset>
+            </form>
+        </div>
+        <div class="footer">
+            <p><a href="#">主页</a><a href="#">校友博客</a><a href="#">校友BBS</a> </p>
+            <small>
+                <p>广东海洋大学校友会版权所有 © 2010 - 2012</p>
+                <p>BMC黑魔方工作室技术支持</p>
+            </small></div>
+    </body>
+</html>

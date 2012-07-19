@@ -1,0 +1,48 @@
+<?php if (!defined('THINK_PATH')) exit();?><script type="text/javascript" src="../Public/js/jquery-1.4.2.min.js"></script>
+<div id="nav">
+    <!--导航条-->
+    <div id="navMenu">
+        <ul>
+            <li><a href="__APP__/">校友网首页</a></li>
+            <li><a href="__APP__/Fenhui/Index/Name/<?php echo $_SESSION["fenhui"];?>"><?php echo ($fenhuiName); ?>主页</a></li>
+            <li><a href="__APP__/News/Index/id/<?php echo $_SESSION["fenhuiId"];?>"><?php echo ($fenhuiName); ?>动态</a></li>
+            <li><a href="__APP__/Notice/Index/id/<?php echo $_SESSION["fenhuiId"];?>"><?php echo ($fenhuiName); ?>公告</a></li>
+            <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>" rel="organdrop"><?php echo ($fenhuiName); ?>机构</a></li>
+            <li><a href="__APP__/Tongxun/">校友通讯</a></li>
+            <li><a href="__APP__/Help/">帮助平台</a></li>
+        </ul>
+    </div>
+    <!--二级导航-->
+    <script type="text/javascript" src="../Public/js/dropdown.js"></script>
+    <ul id="organdrop" class="dropMenu">
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/info">简介</a></li>
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/zhangcheng">章程</a></li>
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/lishihui">理事会</a></li>
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/zzjg">组织机构</a></li>
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/duty">职责</a></li>
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/rule">规章制度</a></li>
+        <li><a href="__APP__/Organ/Index/Name/<?php echo $_SESSION["fenhui"];?>/value/jishi">纪事</a></li>
+        <li><a href="__APP__/Fenhui/fenhuiList/">各地校友会链接</a></li>
+    </ul>
+    <script type="text/javascript">cssdropdown.startchrome("navMenu")</script>
+
+    <div class="clear_h0"></div>
+    <!--导航条结束-->
+    <!--搜索栏-->
+    <div class="search">
+        <form action="" name="searchform">
+            <div class="form">
+                <h4>搜索新闻</h4>
+                <input name="search-keyword" type="text" class="search-keyword" id="search-keyword" maxlength="18"/>
+                <button type="submit" class="search-bt">搜索新闻</button>
+            </div>
+        </form>
+        <!--热门标签-->
+        <div class="hot-tags">
+            <span style="font-size: 14px;">亲爱的校友<strong style="color:#36b6ee;"><?php echo $_SESSION["username"];?></strong>，欢迎您来到广东海洋大学校友网</span>
+        </div>
+        <!--热门标签结束-->
+    </div>
+    <!--搜索栏结束-->
+</div>
+<!--整个导航模块结束-->

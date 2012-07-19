@@ -1,0 +1,44 @@
+<div class="pageContent">
+<script language="JavaScript">
+<!--
+function saveSort(){
+sl.ok();
+ThinkAjax.sendForm('form1','__URL__/saveSort/','result');
+}
+//-->
+</script>
+    <div id="result" class="result none"></div>
+    <script type="text/javascript" src="../Public/js/SortSelect.js"></script>
+    <form method="post" action="__URL__/saveSort/" class="pageForm" onsubmit="return validateCallback(this, dialogAjaxMenu)">
+        <div class="pageFormContent" layoutH="58">
+            <div class="panelBar">
+                <ul class="toolBar">
+                    <li><INPUT TYPE="button" onClick="sl.fnFirst()" value="第一" ></li>
+                    <li><input type="button" value="上 移" onclick="sl.sortUp()"/></li>
+                    <li><input type="button" value="下 移" onclick="sl.sortDown()"/></li>
+                    <li><input type="button" value="最 后" onclick="sl.fnEnd()"/></li>
+                    <li><input type="text" name="jumpNum" size="4" /></li>
+                    <li><input type="button" value="跳 转" onclick="sl.jump()"/></li>
+                </ul>
+            </div>
+
+            <select name="sort" style="width:80%; margin: 0 auto; overflow: auto" size="20">
+                <volist name="sortList" id="node" >
+                    <option value="{$node.id}">{$i}.{$node.title}</option>
+                </volist>
+            </select>
+            <input TYPE="hidden" name="seqNoList" />
+        </div>
+        <div class="formBar">
+            <ul>
+                <li><div class="buttonActive"><div class="buttonContent"><button type="submit">保存</button></div></div></li>
+                <li><div class="button"><div class="buttonContent"><button type="button" class="close">取消</button></div></div></li>
+            </ul>
+        </div>
+    </form>
+    <script language="JavaScript">
+        <!--
+        var sl = new SortSelect('form1','sort','search','jumpNum');
+        //-->
+    </script>
+</div> 
